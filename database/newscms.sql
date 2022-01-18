@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2021 at 01:28 PM
+-- Generation Time: Oct 10, 2021 at 08:56 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `newscms`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `category_id` int(10) UNSIGNED NOT NULL,
+  `category_name` varchar(100) NOT NULL,
+  `post` int(11) NOT NULL DEFAULT 0
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`category_id`, `category_name`, `post`) VALUES
+(1, 'Politics', 2),
+(2, 'Education', 1),
+(3, 'Health', 0),
+(4, 'Entertainment', 1),
+(5, 'Sports', 1),
+(6, 'Crime', 2);
 
 -- --------------------------------------------------------
 
@@ -47,11 +71,43 @@ INSERT INTO `post` (`post_id`, `title`, `description`, `category`, `post_date`, 
 (3, 'Rajasthan: Man, daughter found dead, suicide suspected', 'Bikaner: A 65-year-old man and his daughter were found dead inside their home here, in a suspected case of suicide, police said on Sunday.\r\n\r\nShaukat Ali and his daughter Jonia (30) allegedly consumed poison and slit their wrists, police said.\r\n\r\nThe man’s elder daughter Babli (32) too slit her wrist but survived and is recuperating at a hospital, they added.\r\n\r\nThe incident took place in Dhobitalai area of the district, they said.\r\n\r\nAs no one from the family was answering the door, the neighbours informed police who broke into the house.\r\n\r\n“When we entered, Shaukat and Jonia were found dead while Babli was lying unconscious,” police said.\r\n\r\nSHO Kotegate Police Station Manoj Machra said prima facie, Shaukat and Jonia died due to poisoning because there was not much bleeding.\r\n\r\n“Babli is under treatment at the PBM hospital. The reason behind the suspected suicide is not clear yet and no suicide note was recovered from the house. The matter is under investigation,” he said.', '6', '2021-03-27', 1, 'suc.jpg'),
 (4, 'Retired high court judge to probe corruption charges against me, says Anil Deshmukh', 'Maharashtra Home Minister Anil Deshmukh said on Sunday that the state government has decided to conduct a probe into the corruption allegations against him by a retired high court judge.\r\n\r\n“In the cabinet meeting, I had requested the chief minister to conduct an inquiry into the corruption allegations that were levelled against me by the former Mumbai police commissioner (Param Bir Singh). And the chief minister and state government has decided to conduct the probe through a retired high court judge. And now all the allegations will be probed and whatever the truth is, will come out,” Deshmukh said.\r\n\r\nAnil Deshmukh was asked to comment on the sharp attack on him made in the Shiv Sena’s party mouthpiece Saamana, which has said that Anil Deshmukh got the high-profile post only because senior NCP leaders Jayant Patil and Dileep Wales Patil had refused to accept it.\r\n\r\nBut while Deshmukh didn’t comment directly on the Saamana article, cabinet minister and NCP leader Nawab Malik hit back at the Sena saying they would not accept the remark that Anil Deshmukh was an ‘accidental home minister’.\r\n\r\nNawab Malik said, “Saamana has the right over its editorial content but we will not accept that Anil Deshmukh was an accidental home minister. He has been an MLA for five terms and has experience of nearly 18 years in various posts.”', '6', '2021-03-28', 2, 'anil.webp'),
 (5, 'Throwback Thursday: Kangana’s Thalaivi shows attack on Jayalalithaa in Tamil Nadu Assembly. Here is ', 'Exactly 32 years ago, on March 25, 1989, what happened in Tamil Nadu Assembly changed the nature of politics in the state. Many say it laid the foundation of vendetta politics in Tamil Nadu.\r\n\r\nOn that day, then Chief Minister M Karunanidhi was pushed to the ground by Opposition AIADMK MLAs. To avenge the attack on Karunanidhi, Opposition leader J Jayalalithaa’s saree was pulled, and she was pushed by ruling DMK leaders.\r\n\r\nNational Award-winning actor Kangana Ranaut’s Thalaivi’s trailer released earlier this week shows what happened that day in Tamil Nadu Assembly. The film is based on late Jayalalithaa’s life. The 3.22-minute trailer shows the violence that changed political discourse of Tamil Nadu.\r\n\r\nWhat Happened In 1989?\r\nFirst, a little context.\r\n\r\nKarunanidhi was into his third term as Tamil Nadu chief minister. Around two weeks before the violent incident in the Assembly, a case of cheating had been filed against Jayalalithaa’s close aide Natarajan (the husband of VK Sasisakala). The police had raided his residence.\r\n\r\nAn angry Jayalalithaa threatened to resign. Her letter to the Speaker was leaked to the press, forcing her to change her mind. Jayalalithaa launched an attack on the Karunanidhi government, accusing it of tapping her phone and alleged police high-handedness at the behest of the ruling party.', '4', '2021-03-28', 2, 'thaliavi.webp'),
-(6, 'West Bengal, Assam Phase 1 voting | HIGHLIGHTS', 'West Bengal, Assam Phase 1 voting | HIGHLIGHTS: Voting in phase 1 of West Bengal and Assam Assembly elections 2021 was held on Saturday. The polling in phase 1 of West Bengal and Assam Assembly elections started at 7 am and concluded at 6 pm. As per the data released by the Election Commission (EC), Bengal saw 79.79 per cent voter turnout by 6:20 pm and the same in Assam was 72.30 per cent. In phase 1 of West Bengal and Assam Assembly elections, over 1.54 crore voters were eligible to exercise their franchise to elect the next governments in the states. In West Bengal, voting was for 30 seats while in Assam, 47 seats were in fray in Phase 1.', '1', '2021-03-28', 4, 'bengal_voting_pti_1200x768.webp');
+(6, 'West Bengal, Assam Phase 1 voting | HIGHLIGHTS', 'West Bengal, Assam Phase 1 voting | HIGHLIGHTS: Voting in phase 1 of West Bengal and Assam Assembly elections 2021 was held on Saturday. The polling in phase 1 of West Bengal and Assam Assembly elections started at 7 am and concluded at 6 pm. As per the data released by the Election Commission (EC), Bengal saw 79.79 per cent voter turnout by 6:20 pm and the same in Assam was 72.30 per cent. In phase 1 of West Bengal and Assam Assembly elections, over 1.54 crore voters were eligible to exercise their franchise to elect the next governments in the states. In West Bengal, voting was for 30 seats while in Assam, 47 seats were in fray in Phase 1.', '1', '2021-03-28', 4, 'bengal_voting_pti_1200x768.webp'),
+(7, 'Covid cases continue to surge in Odisha’s institutes, 20 new cases at ALLEN, 10 at IIT Bhubaneswar', 'More than 20 students have tested positive for Covid-19 at the ALLEN Career Institute in Odisha’s capital city Bhubaneswar. Similarly, ten fresh cases of the virus were reported from the Indian Institute of Technology (IIT), Bhubaneswar, which is located on the outskirts of the city.\r\n\r\nThis comes a day after more than twenty people, including students and staff, tested positive for Covid-19 at the Jharsuguda Engineering School in the state.', '2', '2021-03-28', 2, 'iit.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `first_name` varchar(30) NOT NULL,
+  `last_name` varchar(30) NOT NULL,
+  `username` varchar(30) DEFAULT NULL,
+  `password` varchar(40) DEFAULT NULL,
+  `role` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `username`, `password`, `role`) VALUES
+(1, 'shubham', 'pandey', 'shubham123', '619780bfb21065791db3f07e20c7f71c', 1),
+(2, 'Arpita', 'Abraham', 'arpita123', '21232f297a57a5a743894a0e4a801fc3', 0),
+(3, 'rahul', 'mishra', 'rahul12', '21232f297a57a5a743894a0e4a801fc3', 0),
+(4, 'Kunal', 'naik', 'kunaln', '21232f297a57a5a743894a0e4a801fc3', 0);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`category_id`);
 
 --
 -- Indexes for table `post`
@@ -60,14 +116,32 @@ ALTER TABLE `post`
   ADD PRIMARY KEY (`post_id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `post_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
